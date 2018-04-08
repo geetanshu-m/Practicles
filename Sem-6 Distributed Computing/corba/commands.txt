@@ -1,0 +1,11 @@
+idlj -fall Hello.idl
+
+idlj -fallTie -oldImplBase Hello.idl
+
+javac *.java HelloApp/*.java
+
+orbd -ORBInitialPort 1050 -ORBInitialHost localhost&
+
+java HelloServer -ORBInitialPort 1050 -ORBInitialHost localhost&
+
+java HelloClient -ORBInitialPort 1050 -ORBInitialHost localhost
