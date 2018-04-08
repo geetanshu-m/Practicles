@@ -1,0 +1,7 @@
+javac *.java
+
+start rmiregistry
+
+java SampleServerImpl
+
+java RMIclient
